@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Problem 4</title>
+    <link rel="stylesheet" href="jquery-ui-1.13.2\jquery-ui.min.css" />
+    <script src="jquery-ui-1.13.2\external\jquery\jquery.js"></script>
+    <script src="jquery-ui-1.13.2\jquery-ui.min.js"></script>
+    <script>
+      $(function () {
+        $("#dialog-confirm").dialog({
+          resizable: false,
+          height: "auto",
+          width: 400,
+          modal: true,
+          buttons: {
+            "Save changes": function () {
+              $(this).dialog("close");
+              alert("Saved");
+            },
+            Close: function () {
+              $(this).dialog("close");
+            },
+          },
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <input type="button" value="Test model here" />
+    <p>
+      Sed vel diam id libero <a href="http://example.com">rutrum convallis</a>.
+      Donec aliquet leo vel magna. Phasellus rhoncus faucibus ante. Etiam
+      bibendum, enim faucibus aliquet rhoncus, arcu felis ultricies neque, sit
+      amet auctor elit eros a lectus.
+    </p>
+    <div id="dialog-confirm" title="Modal title">
+      <p>
+        <span
+          class="ui-icon ui-icon-alert"
+          style="float: left; margin: 12px 12px 20px 0"
+        ></span
+        >Placeholder text for this demonstration of a vertically centered modal
+        dialog.
+      </p>
+    </div>
+  </body>
+</html>
